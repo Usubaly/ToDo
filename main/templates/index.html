@@ -1,12 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <div class="box"></div>
-</body>
-</html>
+<!-- {% load static %} -->
+<DOCTYPE html!>
+
+    <head>
+        <title>Usubaly ToDo List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = "Stylesheet" href = "css/todo.css">
+        <link rel="stylesheet" href="{% static 'css/todo.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/animated_favicon1' %}">
+        <link rel="stylesheet" href="{% static 'assets/favicon.ico' %}">
+        <link rel="stylesheet" href="{% static 'js/todo2.js' %}">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+        <link rel = "shortcut icon" href="assets/favicon.ico">
+        <link rel="icon" type="image/gif" href="assests/animated_favicon1.gif" >
+     </head>
+
+    <body>
+
+        <div id = "todo">
+            <h1> Жумуштардын тизмеси <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
+
+            <input type = "text" placeholder="Тизмеге кошуу үчүн жазуу">
+
+            <ul class="todos">
+                
+                <li><span><i class="fas fa-trash-alt"></i></span>Автоунаамды тазалоо</li>
+                <li><span><i class="fas fa-trash-alt"></i></span>Базарга баруу</li>
+                <li><span><i class="fas fa-trash-alt"></i></span>Үй жыйноо</li>
+                <li><span><i class="fas fa-trash-alt"></i></span>Тамак бышыруу</li>
+            </ul>
+
+            <div id= "buttons">
+                <button class="save">Сактоо</button>
+                <button class="clear">Тазалоо</button>
+                <button class="tipBtn">Справка</button>
+            </div>
+        </div>
+
+        <div id = "overlay">
+           <a href="javascript:void(0)" class="closebtn">&times;</a>
+           <ul class="tips">
+               <li>Тизме жазуу үчүн КАРАНДАШТЫ басыңыз</li>
+               <li>Тизмеге кошуу үчүң enter баскычын басыңыз</li>
+               <li>Тизмени тазалоо үчүн ӨЧҮРҮҮ баскычын басыңыз</li>
+               <li>Тизмени сактоо үчүн САКТОО баскычын басыңыз</li>
+               <li>Жумуш тизмесин жазган соң, САКТАГАНДЫ унутпаңыз</li>
+            </ul>
+            
+        </div>
+        <script src="Js/todo2.js"></script>
+    </body>
