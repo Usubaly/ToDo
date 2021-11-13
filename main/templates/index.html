@@ -1,4 +1,4 @@
-<!-- {% load static %} -->
+{% load static %}
 <DOCTYPE html!>
 
     <head>
@@ -17,7 +17,7 @@
      </head>
 
     <body>
-
+          {% for todo in todo_list %}
         <div id = "todo">
             <h1> Жумуштардын тизмеси <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
 
@@ -32,12 +32,12 @@
             </ul>
 
             <div id= "buttons">
-                <button class="save">Сактоо</button>
+                <button class="sav">Сактоо</button>
                 <button class="clear">Тазалоо</button>
                 <button class="tipBtn">Справка</button>
             </div>
         </div>
-
+            {% endfor %}
         <div id = "overlay">
            <a href="javascript:void(0)" class="closebtn">&times;</a>
            <ul class="tips">

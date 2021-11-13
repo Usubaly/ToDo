@@ -1,4 +1,5 @@
-from django.shortcuts import render, HttpResponse
+from typing import Text
+from django.shortcuts import redirect, render, HttpResponse
 from .models import ToDo
 
 
@@ -13,3 +14,16 @@ def test(request):
 
 def second(request):
     return HttpResponse("test 2 page")
+
+def add_todo(request):
+    form = request.POST
+    text = form["todo_text"]
+    todo = ToDo(text=text)
+    todo.save()
+    return redirect(test)
+
+
+def delete_todo(request, id):
+    todo = ToDo.objects.get(id-id)
+    todo.delete()
+    return redirect(test)
